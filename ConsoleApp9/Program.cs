@@ -15,17 +15,17 @@ namespace ConsoleApp9
         {
             MathOp mathinst = new MathOp();//Instantiate the MathOp class
             Console.WriteLine("Enter an interger: ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num1 = Convert.ToInt32(Console.ReadLine()); //Passing first parameter
             Console.WriteLine("Enter a second integer, or just press enter: ");
                 try
                 {
-                int num2 = Convert.ToInt32(Console.ReadLine());
-                mathinst.PrintMath(num1,num2);
+                int num2 = Convert.ToInt32(Console.ReadLine());//Passing second parameter
+                mathinst.PrintMath(num1, num2); //Calling the method
                 
                 }
                 catch
                 {
-                    mathinst.PrintMath(num1);
+                    mathinst.PrintMath(num1);//Calling the method
                     
                 }
                 
