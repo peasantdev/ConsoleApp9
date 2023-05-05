@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -16,18 +17,18 @@ namespace ConsoleApp9
             Console.WriteLine("Enter an interger: ");
             int num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter a second integer, or just press enter: ");
-            try
-            {
+                try
+                {
                 int num2 = Convert.ToInt32(Console.ReadLine());
-                int results = mathinst.Math(num1, num2);
-                Console.WriteLine(num1 + " X " + num2 + " = " + results);
-            }
-            catch
-            {
-                int results = mathinst.Math(num1);
-                Console.WriteLine(num1 + " x Default 1 = " + results);
-            }
-            Console.ReadLine();
+                mathinst.PrintMath(num1,num2);
+                
+                }
+                catch
+                {
+                    mathinst.PrintMath(num1);
+                    
+                }
+                
             
         }
     }
